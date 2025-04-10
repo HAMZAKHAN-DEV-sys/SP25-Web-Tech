@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Tasks</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e6f0ff);
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .task-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #b1def3;
+      padding: 15px 20px;
+      border-left: 5px solid #0047b3;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .task:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .task span {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .task button {
+      background-color: #0047b3;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .task button:hover {
+      background-color: #c61212;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>All Tasks</h1>
+
+  <div class="task-list">
+    <div class="task">
+      Assignment 1: CV using HTML & CSS
+      <button onclick="loadTask('CV.html')">View</button>
+    </div>
+    <div class="task">
+      Assignment 2: E-Commerce Landing Page
+      <button onclick="loadTask('index.html')">View</button>
+    </div>
+    <div class="task">
+      Lab Task 1: Landing Page using Bootstrap
+      <button onclick="loadTask('bootstrap.html')">View</button>
+    </div>
+    <div class="task">
+      Lab Task 2: Checkout Page with Validation
+      <button onclick="loadTask('Checkoutpage.html')">View</button>
+    </div>
+  </div>
+
+  <iframe id="taskFrame" src="" title="All Task"></iframe>
+
+  <script>
+    function loadTask(path) {
+      document.getElementById('taskFrame').src = path;
+    }
+  </script>
+
+</body>
+</html>
