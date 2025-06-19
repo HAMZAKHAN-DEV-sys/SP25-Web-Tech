@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Edit Vehicle</title></head>
+<body class="container mt-4">
+  <h2>Edit Vehicle</h2>
+  <form action="/vehicles/<%= vehicle._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <input name="name" value="<%= vehicle.name %>" required><br>
+    <input name="brand" value="<%= vehicle.brand %>" required><br>
+    <input name="price" type="number" value="<%= vehicle.price %>" required><br>
+    <input name="type" value="<%= vehicle.type %>" required><br>
+    <input type="file" name="image"><br><br>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
