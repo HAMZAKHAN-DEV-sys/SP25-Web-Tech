@@ -1,0 +1,12 @@
+
+<h2>My Orders</h2>
+<% if (orders.length === 0) { %>
+  <p>No orders found.</p>
+<% } else { %>
+  <ul>
+    <% orders.forEach(order => { %>
+      <li><strong>Total:</strong> ₹<%= order.total %> | <%= order.address %></li>
+    <% }) %>
+  </ul>
+<% } %>
+<a href="/logout">Logout</a>
