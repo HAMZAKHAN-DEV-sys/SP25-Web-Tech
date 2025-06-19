@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <h2>Add New Vehicle</h2>
+    <form action="/vehicles/admin" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Brand</label>
+            <input type="text" name="brand" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Type</label>
+            <select name="type" class="form-control" required>
+                <option value="sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="truck">Truck</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label>Price</label>
+            <input type="number" name="price" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Image</label>
+            <input type="file" name="image" class="form-control">
+        </div>
+        <button class="btn btn-success">Create</button>
+    </form>
+</div>

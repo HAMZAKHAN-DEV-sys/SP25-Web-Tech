@@ -1,0 +1,22 @@
+
+<section class="hero">
+  <div class="hero-image left"></div>
+  <div class="hero-text">
+    <h1>NEW HERITAGE</h1>
+    <p>Inspired by our heritage<br>rewritten for today</p>
+    <a href="#" class="shop-btn">Shop Now</a>
+  </div>
+  <div class="hero-image right"></div>
+</section>
+
+<section class="featured-products">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+    <% products.forEach(product => { %>
+      <div class="product-card">
+        <img src="<%= product.image %>" alt="<%= product.name %>">
+        <p><%= product.name %></p>
+      </div>
+    <% }); %>
+  </div>
+</section>

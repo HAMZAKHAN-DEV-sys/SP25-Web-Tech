@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <h2>Manage Vehicles</h2>
+    <a href="/vehicles/admin/new" class="btn btn-primary mb-3">Add Vehicle</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% vehicles.forEach(vehicle => { %>
+                <tr>
+                    <td>
+                        <% if(vehicle.image) { %>
+                            <img src="<%= vehicle.image %>" width="80">
+                        <% } %>
+                    </td>
+                    <td><%= vehicle.name %></td>
+                    <td><%= vehicle.brand %></td>
+                    <td><%= vehicle.type %></td>
+                    <td>$<%= vehicle.price %></td>
+                    <td>
+                        <a href="/vehicles/admin/<%= vehicle._id %>/edit" class="btn btn-sm btn-warning">Edit</a>
+                        <form action="/vehicles/admin/<%= vehicle._id %>/delete" method="POST" style="display:inline;">
+                            <button class="btn btn-sm btn-danger" onclick="return confirm('Delete this vehicle?')">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
